@@ -193,14 +193,14 @@ while i >= 0:
 # Does it contain vowels
 
 
-def findVowel(vowel, str):
-    if vowel in str:
+def findVowel(vowel, string1):
+    if vowel in string1:
         print(f"{vowel} found")
     else:
         print(f"{vowel} not found")
 
 
-# string = input("Please type in a string:")
+string = input("Please type in a string:")
 
 findVowel("a", string)
 findVowel("e", string)
@@ -311,3 +311,89 @@ while True:
     initialValue += 1
 if initialValue == number:
     print(number)
+
+
+3.4
+
+
+# Seven Brothers
+
+def sevenBrothers():
+    print("Aapo")
+    print("Eero")
+    print("Juhani")
+    print("Lauri")
+    print("Simeoni")
+    print("Timo")
+    print("Tuomas")
+
+# The first character
+
+def first_character(text):
+    print(text[0])
+if __name__ == "__main__":
+    first_character('python')
+    first_character('yellow')
+    first_character('tomorrow')
+    first_character('heliotrope')
+    first_character('open')
+    first_character('night')
+
+
+# Mean
+
+def mean(num1, num2, num3):
+    sumOfThree = num1 + num2 + num3
+    print(sumOfThree / 3)
+
+
+# Print many times
+
+def print_many_times(text,times):
+    for i in range(times):
+        print(text)
+
+# A square of hashes
+
+def hash_square(times):
+    hashes = '#'*times
+    for i in range(times):
+        print(hashes)
+
+# Chessboard
+
+
+# Works only for odd length
+def oddChessboard(length):
+    size = ((length**2) // 2) + 1
+    board = "10" * size
+    for i in range(length):
+        print(board[0:length])
+        board = board[length:]
+
+# Works only for even even length
+def evenChessboard(length):
+    size = length // 2
+    row = "10" * size
+    if length % 2 != 0:
+        row += "1"
+    for i in range(length):
+        print(row)
+        row = row[::-1]
+
+
+def chessboard(length):
+    if length % 2 == 0:
+        evenChessboard(length)
+    else:
+        oddChessboard(length)
+
+
+# A word squared
+def squared(string, length):
+    size = ((length**2) // 2) + 1
+    board = string * size
+    for i in range(length):
+        print(board[0:length])
+        board = board[length:]
+squared('hihi',5)
